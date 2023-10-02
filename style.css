@@ -1,0 +1,234 @@
+* {
+	font-family: "Raleway", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--black: #201714;
+	--yellow: #ffcc01;
+	--green: #79c800;
+	--gray: rgba(255, 255, 255, 0.3);
+	--shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+
+	/* title */
+	--title: var(--black);
+	--descr: var(--black);
+	--divider: var(--yellow);
+	/* card */
+	--card-border: var(--green);
+	--card-bg: var(--gray);
+	--card-shadow: var(--shadow);
+	--card-border-hover: var(--green);
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+}
+
+.category {
+	padding: 0 20px;
+	max-width: 1920px;
+	min-height: 622px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.category__wrapper {
+	position: relative;
+	width: 1610px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.category__title {
+	position: relative;
+	color: var(--title);
+	font-family: Impact;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.category__title::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 88px;
+	height: 4px;
+	border-radius: 99px;
+	background: var(--yellow);
+}
+.category__cards {
+	margin-top: 68px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	gap: 32px;
+}
+.category__card {
+	position: relative;
+	width: 376px;
+	height: 188px;
+	border-radius: 16px;
+	border: 2px solid var(--card-bg);
+	background: var(--card-bg);
+	box-shadow: var(--card-shadow);
+	backdrop-filter: blur(8px);
+	cursor: pointer;
+}
+.category__card:hover {
+	border: 2px solid var(--card-border-hover);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), rgba(121, 200, 0, 0.4);
+}
+.card_1 {
+	background-image: url("./img/card_1/card_1_from.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 24px;
+}
+.card_2 {
+	background-image: url("./img/card_2/card_2_from.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 45px;
+}
+.card_3 {
+	background-image: url("./img/card_3/from/image.png");
+	background-repeat: no-repeat;
+	background-position: 84% 24px;
+}
+.card_4 {
+	background-image: url("./img/card_4/from/substance.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 24px;
+}
+.card_1:hover {
+	background-image: url("./img/card_1/card_1_to.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 9.666px;
+}
+.card_2:hover {
+	background-image: url("./img/card_2/card_2_to.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 24px;
+}
+.card_3:hover {
+	background-image: url("./img/card_3/to/stopImage.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 24px;
+}
+.card_4:hover {
+	background-image: url("./img/card_4/to/substance.svg");
+	background-repeat: no-repeat;
+	background-position: 84% 24px;
+}
+.category__image {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+}
+.category__descr {
+	position: absolute;
+	left: 16px;
+	bottom: 16px;
+	color: var(--descr);
+	font-size: 24px;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: -1px;
+}
+
+/*  decore */
+
+.category__leaf-green {
+	position: absolute;
+	transition: all 1.5s;
+	top: -77px;
+	left: -145px;
+}
+.category__leaf-brown {
+	position: absolute;
+	transition: all 1.5s;
+	right: 26%;
+	bottom: -61px;
+	z-index: -1;
+}
+.category__decore {
+	position: absolute;
+	top: -165px;
+	right: 27%;
+}
+.category__decore-2 {
+	position: absolute;
+	left: -153px;
+	bottom: -172px;
+	z-index: -1;
+}
+.category__circle {
+	position: absolute;
+	bottom: -30px;
+	right: -131px;
+	z-index: -1;
+}
+
+/* animation image */
+
+@keyframes card__img-1 {
+	from {
+		background-image: url("./img/card_1/card_1_from.svg");
+	}
+	to {
+		background-repeat: no-repeat;
+	}
+}
+
+@keyframes card__img-2 {
+	from {
+		background-image: url("./img/card_2/card_2_from.svg");
+		background-repeat: no-repeat;
+		background-position: 84% 24px;
+	}
+	to {
+		background-repeat: no-repeat;
+		background-position: 84% 24px;
+	}
+}
+
+@keyframes card__img-3 {
+	from {
+		background-image: url("./img/card_3/from/image.png");
+		background-repeat: no-repeat;
+		background-position: 84% 24px;
+	}
+	to {
+		background-repeat: no-repeat;
+		background-position: 84% 24px;
+	}
+}
+
+@keyframes card__img-4 {
+	from {
+		background-image: url("./img/card_4/card_4_from.svg");
+		background-repeat: no-repeat;
+		background-position: 84% 24px;
+	}
+	to {
+		background-repeat: no-repeat;
+		background-position: 84% 24px;
+	}
+}
+
+@media (max-width: 576px) {
+	.category__card {
+		width: 270px;
+	}
+}
